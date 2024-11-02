@@ -1,0 +1,10 @@
+@use '../../../styles/variables' as *;
+
+.header {
+  background-color: $background !important;
+  border-bottom: 1px solid $current-line;
+  
+  :global(.MuiToolbar-root) {
+    padding: $spacing-medium $spacing-large;
+  }
+}
