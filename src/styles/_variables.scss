@@ -1,8 +1,15 @@
-// Colors
-$primary-color: #1976d2;
-$secondary-color: #dc004e;
-$background-color: #ffffff;
-$text-color: #000000;
+// Dracula Colors
+$background: var(--background);
+$current-line: var(--current-line);
+$foreground: var(--foreground);
+$comment: var(--comment);
+$cyan: var(--cyan);
+$green: var(--green);
+$orange: var(--orange);
+$pink: var(--pink);
+$purple: var(--purple);
+$red: var(--red);
+$yellow: var(--yellow);
 
 // Breakpoints
 $mobile: 576px;
@@ -17,8 +24,8 @@ $spacing-medium: $spacing-unit * 2;
 $spacing-large: $spacing-unit * 3;
 
 // Typography
-$font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$font-family-base: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 $font-size-base: 16px;
 $line-height-base: 1.5;
 
