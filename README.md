@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MRGLL.ME
 
-## Getting Started
+An AI-powered platform that generates visually stunning and narrative-rich World of Warcraft pet battle scenes. The application creates fan fiction pet battles with AI-generated images and stories, specifically designed for WoW battle pet enthusiasts.
 
-First, run the development server:
+## Key Features
+
+- Clean pet interface with WowHead integration
+- AI-generated battle scenes and narratives
+- Consistent chibi/cute art style across generations
+- Battle scene components including images, descriptions, and narratives
+- Optional OpenRouter integration for user-generated content
+
+## Tech Stack
+
+- Next.js 15 with App Router and React 19 RC
+- Material-UI (MUI) v6 for component library
+- SCSS Modules for styling
+- Framer Motion for animations
+- TanStack Query for state management
+- next-i18next for internationalization
+
+## Developer Setup
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/KevinBrack/mrgll-me.git
+cd mrgll-me
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Testing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The project includes comprehensive testing setup:
 
-## Learn More
+### Unit and Integration Tests
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Run Jest tests
+npm test
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Watch mode
+npm run test:watch
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Coverage report
+npm run test:coverage
+```
 
-## Deploy on Vercel
+### End-to-End Tests
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+# Run WebdriverIO tests (locally)
+npm run test:e2e
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Note: E2E tests are configured to run locally and may require additional setup in CI environments.
+
+## Contributing
+
+1. Create a feature branch:
+
+```bash
+git checkout -b feature/your-feature-name
+```
+
+2. Make your changes and ensure all tests pass
+3. Push your branch and create a pull request
