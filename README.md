@@ -1,81 +1,103 @@
-# Turborepo starter
+# MRGLL.ME
 
-This is an official starter Turborepo.
+An AI-powered platform that generates visually stunning and narrative-rich World of Warcraft pet battle scenes. The application creates fan fiction pet battles with AI-generated images and stories, specifically designed for WoW battle pet enthusiasts.
 
-## Using this example
+## Key Features
 
-Run the following command:
+* Clean pet interface with WowHead integration
+* AI-generated battle scenes and narratives
+* Consistent chibi/cute art style across generations
+* Battle scene components including images, descriptions, and narratives
+* Optional OpenRouter integration for user-generated content
 
-```sh
-npx create-turbo@latest
-```
+## Tech Stack
 
-## What's inside?
+* Turborepo for monorepo management
+* React with TypeScript and Vite for the web application
+* Express with TypeScript for the API
+* Material-UI (MUI) v6 for component library
+* SCSS Modules for styling
+* Framer Motion for animations
+* TanStack Query for state management
+* next-i18next for internationalization
 
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
+## Project Structure
 
 ```
-cd my-turborepo
-pnpm build
+mrgll-me/
+├── apps/
+│   ├── web/          # React TypeScript application
+│   └── api/          # Express TypeScript API
+├── packages/
+│   └── types/        # Shared TypeScript interfaces
 ```
 
-### Develop
+## Developer Setup
 
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
+1. Clone the repository:
+```bash
+git clone https://github.com/KevinBrack/mrgll-me.git
+cd mrgll-me
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
+2. Install dependencies:
+```bash
+npm install
 ```
 
-## Useful Links
+3. Run the development servers:
+```bash
+npm run dev
+```
 
-Learn more about the power of Turborepo:
+This will start:
+- Web app at http://localhost:5173
+- API server at http://localhost:3001
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+## Testing
+
+### Unit and Integration Tests
+
+```bash
+# Run Jest tests
+npm test
+
+# Watch mode
+npm run test:watch
+
+# Coverage report
+npm run test:coverage
+```
+
+### End-to-End Tests
+
+```bash
+# Run WebdriverIO tests (locally)
+npm run test:e2e
+```
+
+Note: E2E tests are configured to run locally and may require additional setup in CI environments.
+
+## Contributing
+
+1. Create a feature branch:
+```bash
+git checkout -b feature/your-feature-name
+```
+
+2. Make your changes and ensure all tests pass
+3. Push your branch and create a pull request
+
+## Available Scripts
+
+- `npm run dev` - Start all applications in development mode
+- `npm run build` - Build all applications
+- `npm run lint` - Run linting across all applications
+- `npm test` - Run tests across all applications
+
+## API Endpoints
+
+- `GET /api/users` - Get all users
+- `GET /api/users/:id` - Get a specific user by ID
+
+The API uses shared TypeScript interfaces from the `@repo/types` package to ensure type safety between the frontend and backend.
